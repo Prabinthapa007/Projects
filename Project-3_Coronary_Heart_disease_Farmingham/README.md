@@ -27,9 +27,10 @@ Most of the algorithm were sourced from popular open-source library, scikit-lear
 The table below shows the report on various models we have tested on the dataset.
 
 | Model Name               | Accuracy | Precision | Recall | F1-Score | TP | FP | TN | FN |
-|--------------------------|----------|-----------|--------|----------|------|----|----|----|----|
-| Logistic Regression      | 0.678     | 0.677      | 0.682  | 0.679  | 475 | 227 | 470 | 221 |
-| Support Vector Classifier | 0.78   | 0.782      | 0.775   | 0.779   | 540 | 150 | 547 | 156 |
-| Random Forest Classifier | 0.978    | 0.962     | 0.996   | 0.979   | 693 | 27 | 670 | 03 |
+|--------------------------|----------|-----------|--------|----------|----|----|----|----|
+| Logistic Regression      | 0.678    | 0.677     | 0.682  | 0.679    | 475| 227| 470| 221|
+| Support Vector Classifier| 0.78     | 0.782     | 0.775  | 0.779    | 540| 150| 547| 156|
+| Random Forest Classifier | 0.978    | 0.962     | 0.996  | 0.979    | 693| 27 | 670| 03 |
+
 
 From the above table, we can see that, for the dataset, Random Forest Classifier is the best model to predict the Heart disease.
