@@ -28,9 +28,14 @@ The table below shows the report on various models we have tested on the dataset
 
 | Model Name               | Accuracy | Precision | Recall | F1-Score | TP | FP | TN | FN |
 |--------------------------|----------|-----------|--------|----------|----|----|----|----|
-| Logistic Regression      | 0.678    | 0.677     | 0.682  | 0.679    | 475| 227| 470| 221|
-| Support Vector Classifier| 0.78     | 0.782     | 0.775  | 0.779    | 540| 150| 547| 156|
-| Random Forest Classifier | 0.978    | 0.962     | 0.996  | 0.979    | 693| 27 | 670| 03 |
+| Logistic Regression      | 0.668    | 0.597     | 0.781  | 0.677    | 435| 294| 402| 122|
+| Support Vector Classifier| 0.776    | 0.723     | 0.803  | 0.761    | 447| 171| 525| 110|
+| Random Forest Classifier | 0.974    | 0.955     | 0.989  | 0.972    | 551| 26 | 670| 06 |
 
 
 From the above table, we can see that, for the dataset, Random Forest Classifier is the best model to predict the Heart disease.
+
+## Discussion
+In this study, I present a detailed machine learning analysis of heart disease. Due to data imbalance, I used an upsampling method to improve the model's predictive performance. I thoroughly checked the test and validation sets to ensure they were almost equal. During the analysis, I achieved a maximum F1-score of 97% with the Random Forest Classifier.
+
+To make the model useful for future applications, I saved the best models and deployed them using Streamlit.
