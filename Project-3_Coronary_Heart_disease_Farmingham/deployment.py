@@ -1,6 +1,7 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 def get_save_file(file_path:str):
     with open(file_path, "rb") as file:
@@ -53,22 +54,22 @@ if __name__ == "__main__":
     }
     user_input_df = pd.DataFrame(user_input_dict)
 
-    # Apply one-hot encoding to the gender column
+    # Applying one-hot encoding to the gender column
     user_input_df = pd.get_dummies(user_input_df, columns=['gender'])
 
-    # Ensure all necessary columns are present
+    # Ensuring all necessary columns are present
     required_columns = ['age', 'cigsPerDay', 'BPMeds', 'prevalentStroke', 'diabetes', 'totChol', 'sysBP', 'BMI', 'heartRate', 'glucose', 'gender_female', 'gender_male']
     for col in required_columns:
         if col not in user_input_df.columns:
             user_input_df[col] = 0
 
-    # Reorder columns to match the training data
+    # Reordering columns to match the training data
     user_input_df = user_input_df[required_columns]
 
-    # Convert dataframe to numpy array
-    user_input = user_input_df.values
+    # Converting dataframe to numpy array
+    user_input = np.array(user_input_df)
 
-    # Debugging: Display the user input before prediction
+    # Displaying the user input before prediction
     st.write("User Input DataFrame:")
     st.write(user_input_df)
 
