@@ -10,7 +10,6 @@ def get_save_file(file_path:str):
 
 best_scaler = get_save_file("best_model/standard_scaler.pkl")
 best_model = get_save_file("best_model/Random_forest.pkl")
-encoded_onehot = get_save_file("best_model/encoded_onehot.pkl")
 
 def prediction(user_input):
     model_output = best_model.predict(
