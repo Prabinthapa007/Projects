@@ -16,11 +16,11 @@ Three clustering models were employed:
 ## Findings
 - **Exploratory Data Analysis (EDA):** Netflix offers more movies than TV shows. There was growth in content from 2013 to 2019, followed by a decline due to COVID-19. The USA has the most content, with peaks in content addition in July and December. Content is aimed at mature audiences, teenagers, and general audiences.
 - **Data Cleaning:** Null values were addressed to ensure consistency and accuracy in the dataset.
+- **Text Preprocessing:** Tokenization with TweetTokenizer and vectorization with TF-IDF Vectorizer were performed, along with Dimensionality Reduction capturing 3300 components.
 - **Clustering:** 
   - Partition Based Clustering: Optimal number of clusters was 4, determined using elbow method and silhouette score analysis.
   - BIRCH: No clusters were found due to points being assigned to wrong clusters.
   - Agglomerative Hierarchical Clustering: Optimal number of clusters was 13, determined by visualizing the dendrogram.
-- **Text Preprocessing:** Tokenization with TweetTokenizer and vectorization with TF-IDF Vectorizer were performed, along with Dimensionality Reduction capturing 3300 components.
 - **Recommendation System:** A content-based recommendation system was developed using a similarity matrix based on cosine similarity. The system suggests 10 movies or TV shows similar to those the user has previously watched.
 
 **Note:** For detailed implementation and results, refer to the project files.
